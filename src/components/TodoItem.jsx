@@ -1,3 +1,9 @@
-export default function TodoItem() {
-  return <div>TodoItem</div>;
+export default function TodoItem({ todo, handleToggle }) {
+  return (
+    <>
+      <button type="button" onClick={() => handleToggle(todo.id)}>
+        {todo.isDone ? "취소" : "완료"}
+      </button>
+    </>
+  );
 }
